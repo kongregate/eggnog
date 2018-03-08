@@ -3,7 +3,7 @@ module Eggnog
 
     class ParseError < StandardError; end
 
-    PARSERS         = [ :ox, :nokogiri ].freeze
+    PARSERS         = [ :nokogiri ].freeze
     CONTENT_ROOT    = "__content__".freeze
     DEFAULT_OPTIONS = {
       :preserve_attributes => false,
@@ -53,7 +53,6 @@ module Eggnog
     # @return [ Symbol ]
     # @api private
     def self.default_parser
-      return :ox       if defined?(::Ox)
       return :nokogiri if defined?(::Nokogiri)
 
       PARSERS.each do |parser|

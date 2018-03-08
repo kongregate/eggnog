@@ -24,9 +24,7 @@ Gem::Specification.new do |gem|
   development_dependencies.each {|lib, version| gem.add_development_dependency(lib, version) }
 
   runtime_dependencies = {
-    "ox" => "~> 1.6.0",
-    "nokogiri" => "~> 1.6.6",
-    "oj" => "~> 1.4.0"
+    "nokogiri" => "~> 1.8.2"
   }
 
   runtime_dependencies.each {|lib, version| gem.add_runtime_dependency(lib, version) }
